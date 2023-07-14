@@ -273,7 +273,7 @@ article .wrapper > *:first-child {
 /* header */
 article header {
 	color: rgb(255, 255, 255);
-	background-color: rgb(115, 53, 142);
+	background-color: rgb(0, 175, 240);
 	padding: var(--padding-tiny);
 }
 
@@ -320,7 +320,7 @@ article h2 {
 }
 
 article h3 {
-	color: rgb(115, 53, 142);
+	color: rgb(0, 175, 240);
 	margin-top: var(--padding-tiny);
 	text-transform: uppercase;
 }
@@ -333,13 +333,13 @@ article p a,
 article ul li a,
 article h1 a,
 article h2 a {
-	color: rgb(115, 53, 142);
+	color: rgb(0, 175, 240);
 	font-weight: 600;
 }
 
 article h1.title {
 	color: rgb(255, 255, 255);
-	background-color: rgb(115, 53, 142);
+	background-color: rgb(0, 175, 240);
 	margin-top: var(--padding-small);
 	margin-bottom: 0;
 	padding: var(--padding-tiny);
@@ -351,7 +351,7 @@ article h1.title {
 }
 
 a.reference {
-	color: rgb(115, 53, 142);
+	color: rgb(0, 175, 240);
 	float: right;
 	margin-top: 8px;
 	padding-left: 8px;
@@ -368,7 +368,7 @@ a.reference {
 }
 
 .notice.error {
-	--color-notice-background: rgb(194, 52, 130);
+	--color-notice-background: rgb(67, 157, 189);
 }
 
 .notice.warning {
@@ -432,7 +432,7 @@ a.reference {
 }
 
 .method h3 {
-	color: rgb(115, 53, 142);
+	color: rgb(0, 175, 240);
 	font-size: var(--font-normal);
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -475,7 +475,7 @@ a.reference {
 }
 
 .method ul li a {
-	color: rgb(115, 53, 142);
+	color: rgb(0, 175, 240);
 	font-weight: 600;
 }
 
@@ -490,7 +490,7 @@ a.reference {
 }
 
 .parameter {
-	background-color: rgb(115, 53, 142);
+	background-color: rgb(0, 175, 240);
 }
 
 .type {
@@ -511,7 +511,7 @@ a.type {
 }
 
 .or {
-	color: rgba(115, 53, 142, 0.5);
+	color: rgba(0, 175, 240, 0.5);
 	background-color: inherit;
 
 	width: calc(100% - 32px);
@@ -520,7 +520,7 @@ a.type {
 
 	text-align: center;
 	font-weight: 600;
-	border-bottom: 1px solid rgba(115, 53, 142, 0.5);
+	border-bottom: 1px solid rgba(0, 175, 240, 0.5);
 }
 
 .or span {
