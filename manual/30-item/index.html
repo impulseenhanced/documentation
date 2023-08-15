@@ -9,7 +9,10 @@
 		<meta property="og:site_name" content="impulse: Enhanced - Documentation" />
 
 			<meta property="og:description" content="
-lol..." />
+
+ is a very simple and straight-forward process. All you need is to navigate to your schema folder, inside schema&#47;items.
+
+Create a new file named **sh_example_item.lua** (replace **example_item** with whatever you prefer, we recommend changing it to the..." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -926,7 +929,70 @@ SetHandsBehindBack											</a>
 					<div class="wrapper">
 
 <h1>Making an item</h1>
-<p>lol</p>
+
+<p>Making an item is a very simple and straight-forward process. All you need is to navigate to your schema folder, inside schema/items. </p>
+
+<p>Create a new file named <strong>sh<em>example</em>item.lua</strong> (replace <strong>example_item</strong> with whatever you prefer, we recommend changing it to the item's unique ID which you define in the file), open it and, using the template below, edit as you desire! The code has been commented so you know what each line does.</p>
+
+
+<pre>
+<span class="keyword">local</span> ITEM = {}
+
+<span class="comment">-- Item Definition
+</span>ITEM.UniqueID = <span class="string">"example_item"</span> <span class="comment">-- your item unique ID, must be unique as the name suggests
+</span>ITEM.Name = <span class="string">"Example item"</span> <span class="comment">-- display name, doesn't have to be unique.
+</span>ITEM.Desc =  <span class="string">"A simple item used as a template for other items."</span> <span class="comment">-- description of the item
+</span>
+<span class="comment">-- Inventory Icon
+</span><span class="comment">-- Use the console command "impulse_debug_iconeditor" to change these values easily.
+</span>ITEM.Model = Model(<span class="string">"models/maxofs2d/hover_rings.mdl"</span>) <span class="comment">-- model
+</span>ITEM.FOV =  <span class="number">38.644699140401</span>
+ITEM.CamPos =  Vector(<span class="number">0</span>,  <span class="number">25</span>,  <span class="number">18.91117477417</span>)
+ITEM.NoCenter =  <span class="keyword">true</span>
+
+ITEM.Weight = <span class="number">2</span> <span class="comment">-- how much weight it takes to store this item
+</span>
+ITEM.Colour = Color(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>) <span class="comment">-- changing this value will change the colour of the item's name
+</span>
+ITEM.Droppable = <span class="keyword">true</span> <span class="comment">-- if "Drop" option is available
+</span>ITEM.DropOnDeath = <span class="keyword">false</span> <span class="comment">-- should the item drop when you die?
+</span>
+ITEM.DropIfRestricted = <span class="keyword">false</span> <span class="comment">-- if the item is restricted, can we drop it?
+</span>ITEM.DropOnDeathIfRestricted = <span class="keyword">false</span> <span class="comment">-- if the item is restricted, should it drop when you die?
+</span>ITEM.CraftIfRestricted = <span class="keyword">false</span> <span class="comment">-- should the item be available in crafting if it is restricted?
+</span>
+ITEM.Illegal = <span class="keyword">false</span> <span class="comment">-- should the item be illegal?
+</span>ITEM.Equipable = <span class="keyword">true</span> <span class="comment">-- should the item be equipable?
+</span>ITEM.EquipGroup = <span class="string">"hat"</span> <span class="comment">-- EquipGroup can be set to anything, we recommend using words like head, hat, legs, etc
+</span>ITEM.CanStack = <span class="keyword">true</span> <span class="comment">-- should we stack multiple items in the inventory?
+</span>
+ITEM.UseName = <span class="string">"Eat"</span> <span class="comment">-- replaces "Use" with whatever you put instead
+</span>ITEM.UseWorkBarTime = <span class="number">1</span> <span class="comment">-- in seconds, how long should the workbar take until it's finished
+</span>ITEM.UseWorkBarName = <span class="string">"Eating..."</span> <span class="comment">-- workbar text
+</span>ITEM.UseWorkBarSound = <span class="string">"impulse/eat.wav"</span> <span class="comment">-- custom sound that plays when you use the item
+</span>ITEM.UseWorkBarFreeze = <span class="keyword">true</span> <span class="comment">-- if the player should be frozen while the item is used
+</span>
+ITEM.WeaponClass = <span class="string">"weapon_pistol"</span> <span class="comment">-- add this to your code if you want your item to act like a weapon, it uses the weapon's unique id, NOT the item's!
+</span>
+<span class="comment">-- Function called when the player equips the item
+</span><span class="keyword">function</span> ITEM:OnEquip(ply)
+<span class="keyword">end</span>
+
+<span class="comment">-- Function used as a custom check
+</span><span class="keyword">function</span> ITEM:CanUse(owner, userEnt)
+<span class="keyword">end</span>
+
+<span class="comment">-- Function called when the item is used
+</span><span class="keyword">function</span> ITEM:OnUse(ply)
+<span class="keyword">end</span>
+
+<span class="comment">-- Function called when the item is dropped from inventory
+</span><span class="keyword">function</span> ITEM:OnDrop(ply, ent)
+<span class="keyword">end</span>
+
+impulse.RegisterItem(ITEM)
+</pre>
+
 
 					</div>
 			</article>
